@@ -90,3 +90,5 @@ STATIC_ROOT = '_static'
 TEMPLATE_DIRS = (
     os.path.join(BASE_DIR, 'testapp/templates'),
 )
+
+AUTO_RENDER_SELECT2_STATICS = False
