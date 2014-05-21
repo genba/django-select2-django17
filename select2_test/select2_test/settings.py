@@ -10,6 +10,8 @@ https://docs.djangoproject.com/en/dev/ref/settings/
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 import os
+from django.conf.global_settings import TEMPLATE_DIRS
+
 BASE_DIR = os.path.dirname(os.path.dirname(__file__))
 
 
@@ -17,7 +19,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(__file__))
 # See https://docs.djangoproject.com/en/dev/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'w6g)%od6e8@dbxj6uucz0_k28xrz4r2#w!^b+j2)&s#colc2hj'
+SECRET_KEY = 'y-s_yvcz0g+mk-(8u8x-+i+!10c-p^1c@_29&5))d13=dn=u&$'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -36,6 +38,8 @@ INSTALLED_APPS = (
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+
+    'django_select2',
 )
 
 MIDDLEWARE_CLASSES = (
@@ -81,3 +85,8 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/dev/howto/static-files/
 
 STATIC_URL = '/static/'
+STATIC_ROOT = '_static'
+
+TEMPLATE_DIRS = (
+    os.path.join(BASE_DIR, 'testapp/templates'),
+)

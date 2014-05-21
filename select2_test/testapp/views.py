@@ -1,3 +1,6 @@
-from django.shortcuts import render
+from django.views.generic import FormView
+from forms import TestForm
 
-# Create your views here.
+class Startpage(FormView):
+    template_name = 'startpage.html'
+    form_class = TestForm
